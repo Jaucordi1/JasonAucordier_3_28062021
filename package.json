@@ -1,0 +1,23 @@
+{
+  "name": "jasonaucordier_3_28062021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch src/stylesheets/main.sass public/style.css",
+    "build": "sass src/stylesheets/main.sass public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jaucordi1/JasonAucordier_3_28062021.git"
+  },
+  "author": {
+    "email": "jaucordi@gmail.com",
+    "name": "Jason Aucordier",
+    "url": "https://github.com/Jaucordi1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}
