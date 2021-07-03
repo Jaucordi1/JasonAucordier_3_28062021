@@ -18,6 +18,13 @@ html > body {
   font-size: 1rem;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 picture img {
   width: 100%;
   height: 100%;
@@ -62,12 +69,62 @@ picture img {
   margin-right: 2rem;
 }
 
+.button {
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  background: #9356DC;
+  background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.button:is(a):hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Shrikhand, sans-serif;
+}
+h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
 #header {
   background-color: #F6F6F6;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: stretch;
+}
+#header #header-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+}
+#header #header-content > * {
+  margin: 1rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+}
+h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
+  font-size: 2.5rem;
+  font-weight: bold !important;
+  padding: 0 2rem;
+  text-align: center;
+}
+h1:is(h2), h2:is(h2), h3:is(h2), h4:is(h2), h5:is(h2), h6:is(h2) {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
