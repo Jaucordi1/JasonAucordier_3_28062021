@@ -1,4 +1,6 @@
 @import "../components/location"
+@import "../components/button"
+@import "../components/titles"
 
 #header
 	background-color: #F6F6F6
@@ -6,3 +8,13 @@
 	flex-flow: column nowrap
 	justify-content: center
 	align-items: stretch
+
+	#header-content
+		display: flex
+		flex-flow: column nowrap
+		justify-content: space-between
+		align-items: center
+		padding: 4rem
+
+		> *
+			margin: 1rem 0

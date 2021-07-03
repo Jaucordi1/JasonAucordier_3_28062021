@@ -1,0 +1,17 @@
+@import "../utils/mixins"
+@import "../layout/nav-bar"
+@import "../layout/header"
+
+h1, h2, h3, h4, h5, h6
+	@include text
+
+	&:is(h1)
+		font-size: 2.5rem
+		font-weight: bold !important
+		padding: 0 2rem
+		text-align: center
+
+	&:is(h2)
+		font-size: 1.6rem
+		text-align: center
+		font-weight: normal
