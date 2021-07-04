@@ -1,0 +1,46 @@
+#how-it-works
+	padding: 2rem
+	h1
+		text-align: left
+		margin: 2rem 0
+
+	.steps
+		list-style-type: none
+
+		.step
+			@include text
+			@include margin(2rem, 0, 2rem, 1rem)
+			background-color: $color-grey
+			padding: 1.8rem 3rem
+			border-radius: 2rem
+			box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)
+			font:
+				size: 1.8rem
+				weight: bold
+			display: flex
+			flex-flow: row nowrap
+			justify-content: flex-start
+			align-items: center
+			cursor: pointer
+
+			&:hover
+				background-color: rgba($color-primary, .1)
+
+				.fa
+					color: $color-primary
+
+			.badge
+				@include margin(0, 2rem, 0, -4.2rem)
+				background-color: $color-primary
+				display: inline-flex
+				height: 2.5rem
+				width: 2.5rem
+				border-radius: 5rem
+				justify-content: center
+				align-items: center
+				color: white
+				font-weight: normal
+
+			.fa
+				@include margin(0, 2rem, 0, 0)
+				color: rgba($color-black, .6)
