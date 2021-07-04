@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+html > body {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#nav-bar {
+  width: 100%;
+  height: 63px;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  position: relative;
+}
+#nav-bar .brand-link {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+}
+#nav-bar .brand-link .brand {
+  display: block;
+  height: 31px;
+}
+
+#location {
+  height: 50px;
+  background-color: #EAEAEA;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#location .fa {
+  margin-right: 2rem;
+}
+
+.button {
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  background: #9356DC;
+  background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.button:is(a):hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Shrikhand, sans-serif;
+}
+h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#header {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+#header #header-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+}
+#header #header-content > * {
+  margin: 1rem 0;
+}
+
+#how-it-works {
+  padding: 2rem;
+}
+#how-it-works h1 {
+  text-align: left;
+  margin: 2rem 0;
+}
+#how-it-works .steps {
+  list-style-type: none;
+}
+#how-it-works .steps .step {
+  font-family: Roboto, sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 0;
+  background-color: #F6F6F6;
+  padding: 1.8rem 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+#how-it-works .steps .step:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+#how-it-works .steps .step:hover .fa {
+  color: #9356DC;
+}
+#how-it-works .steps .step .badge {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -4.2rem;
+  margin-right: 2rem;
+  background-color: #9356DC;
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 5rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: normal;
+}
+#how-it-works .steps .step .fa {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+}
+h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
+  font-size: 2.5rem;
+  font-weight: bold !important;
+  padding: 0 2rem;
+  text-align: center;
+}
+h1:is(h2), h2:is(h2), h3:is(h2), h4:is(h2), h5:is(h2), h6:is(h2) {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
