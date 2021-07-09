@@ -1,20 +1,22 @@
+@import "../utils/mixins"
 @import "../components/location"
 @import "../components/button"
 @import "../components/titles"
 
 #header
 	background-color: $color-grey
-	display: flex
-	flex-flow: column nowrap
-	justify-content: center
-	align-items: stretch
+	@include flex(column nowrap, center, stretch)
 
 	#header-content
-		display: flex
-		flex-flow: column nowrap
-		justify-content: space-between
-		align-items: center
+		@include flex(column nowrap, space-between, center)
 		padding: 4rem
 
 		> *
-			margin: 1rem 0
+			margin-bottom: 1rem
+		> :nth-child(2)
+			font:
+				size: 1.65rem
+				weight: 500
+			color: rgba($color-black, .6)
+		> :last-child
+			margin: 2rem 0
