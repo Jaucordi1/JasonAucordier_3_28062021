@@ -2,11 +2,13 @@
 	width: 100%
 	height: 100%
 
+/* FONTS */
 @mixin title
 	font-family: Shrikhand, sans-serif
 @mixin text
 	font-family: Roboto, sans-serif
 
+/* SPACING */
 @mixin margin($top, $right, $bottom, $left)
 	margin:
 		top: $top or initial
@@ -14,11 +16,16 @@
 		left: $left or initial
 		right: $right or initial
 
-@mixin flex($direction, $wrap, $basis, $grow, $shrink)
+/* FLEXBOX */
+@mixin flex($flow, $justify-content: initial, $align-items: initial)
 	display: flex
 	flex:
-		direction: $direction or row
-		wrap: $wrap or wrap
-		basis: $basis or initial
-		grow: $grow or initial
-		shrink: $shrink or initial
+		flow: $flow or (row wrap)
+	justify-content: $justify-content
+	align-items: $align-items
+@mixin flex-grow($grow)
+	flex-grow: $grow or 1
+@mixin flex-shrink($shrink)
+	flex-shrink: $shrink or 1
+@mixin flex-basis($basis)
+	flex-basis: $basis or initial
