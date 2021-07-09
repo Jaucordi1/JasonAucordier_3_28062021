@@ -13,3 +13,12 @@
 		bottom: $bottom or initial
 		left: $left or initial
 		right: $right or initial
+
+@mixin flex($direction, $wrap, $basis, $grow, $shrink)
+	display: flex
+	flex:
+		direction: $direction or row
+		wrap: $wrap or wrap
+		basis: $basis or initial
+		grow: $grow or initial
+		shrink: $shrink or initial
