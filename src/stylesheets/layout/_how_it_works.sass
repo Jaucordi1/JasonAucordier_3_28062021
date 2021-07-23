@@ -26,11 +26,23 @@
 			justify-content: flex-start
 			align-items: center
 			cursor: pointer
+			transition:
+				property: background-color
+				duration: .3s
+				timing-function: ease-out
 
 			&:hover
+				transition:
+					property: background-color
+					duration: .3s
+					timing-function: ease-out
 				background-color: rgba($color-primary, .1)
 
 				.fa
+					transition:
+						property: color
+						duration: .3s
+						timing-function: ease-out
 					color: $color-primary
 
 			.badge
@@ -49,4 +61,8 @@
 
 			.fa
 				@include margin(0, 2rem, 0, 0)
+				transition:
+					property: color
+					duration: .3s
+					timing-function: ease-out
 				color: rgba($color-black, .6)
