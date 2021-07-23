@@ -5,8 +5,19 @@
 	@include flex(column nowrap, flex-start, stretch)
 	border-radius: $radius * 1.8
 	text-align: left
-	box-shadow: 0 .3rem 1rem rgba(color('black'), .1)
+	box-shadow: 0 .3rem 1rem rgba(color('grey'), .1)
 	position: relative
+	transition:
+		property: box-shadow
+		duration: .3s
+		timing-function: ease-out
+
+	&:hover
+		box-shadow: 0 .3rem 1rem rgba(color('grey'), .3)
+		transition:
+			property: box-shadow
+			duration: .3s
+			timing-function: ease-out
 
 	> .badge
 		position: absolute
