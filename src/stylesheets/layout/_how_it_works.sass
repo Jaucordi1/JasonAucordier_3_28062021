@@ -3,6 +3,7 @@
 
 #how-it-works
 	padding: 2rem
+
 	h1
 		text-align: left
 		margin: 3rem 0
@@ -14,10 +15,10 @@
 		.step
 			@include text
 			@include margin(2rem, 0, 2rem, 1rem)
-			background-color: $color-grey
+			background-color: $color-light-grey
 			padding: 2.5rem 3rem
 			border-radius: 2rem
-			box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)
+			box-shadow: 0 .5rem 1rem rgba(color('grey'), .2)
 			font:
 				size: 1.8rem
 				weight: bold
@@ -26,11 +27,24 @@
 			justify-content: flex-start
 			align-items: center
 			cursor: pointer
+			transition:
+				property: background-color, box-shadow
+				duration: .3s
+				timing-function: ease-out
 
 			&:hover
+				transition:
+					property: background-color, box-shadow
+					duration: .3s
+					timing-function: ease-out
 				background-color: rgba($color-primary, .1)
+				box-shadow: 0 .5rem 1rem rgba(color('grey'), .3)
 
 				.fa
+					transition:
+						property: color
+						duration: .3s
+						timing-function: ease-out
 					color: $color-primary
 
 			.badge
@@ -49,4 +63,8 @@
 
 			.fa
 				@include margin(0, 2rem, 0, 0)
+				transition:
+					property: color
+					duration: .3s
+					timing-function: ease-out
 				color: rgba($color-black, .6)
