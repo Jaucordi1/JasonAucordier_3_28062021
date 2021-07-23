@@ -1,4 +1,5 @@
 @import "../utils/variables"
+@import "../utils/mixins"
 
 .button
 	padding: 1.5rem 2rem
@@ -11,7 +12,18 @@
 	color: white
 	text-align: center
 	align-self: center
-	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2)
+	box-shadow: 0 .5rem 1rem rgba(color('grey'), .2)
+	transition:
+		property: box-shadow
+		duration: .3s
+		timing-function: ease-out
 
-	&:is(a):hover
-		text-decoration: none
+	&:hover
+		box-shadow: 0 .5rem 1rem rgba(color('grey'), .5)
+		transition:
+			property: box-shadow
+			duration: .3s
+			timing-function: ease-out
+
+		&:is(a)
+			text-decoration: none
