@@ -1,0 +1,14 @@
+@import "../utils/variables"
+@import "../utils/mixins"
+@import "card-list"
+
+#restaurants
+	@include flex(column nowrap, flex-start, stretch)
+	background-color: $color-grey
+	padding: 4rem 0
+
+	> h1
+		text-align: left
+		font:
+			weight: 700
+		margin: 2rem 0
