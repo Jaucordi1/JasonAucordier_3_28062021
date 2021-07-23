@@ -41,5 +41,8 @@
 
 
 /* COLORS */
-@function color($name: "black")
-	@return map.get($colors, $name)
+@function color($name: "missing")
+	@if(map.has-key($colors, $name))
+		@return map.get($colors, $name)
+	@else
+		@return map.get($colors, "black")
