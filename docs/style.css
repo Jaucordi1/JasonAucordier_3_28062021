@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+/* COLORS */
+/* SIZES */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,12 +35,30 @@ html > body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
+#main > * {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+#main > *:last-child {
+  margin-bottom: 0;
+}
+
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+/* COLORS */
+/* SIZES */
 picture img {
   width: 100%;
   height: 100%;
@@ -46,7 +80,8 @@ picture img {
 #nav-bar .brand-link {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 1.2rem;
   height: 100%;
 }
 #nav-bar .brand-link .brand {
@@ -54,6 +89,20 @@ picture img {
   height: 31px;
 }
 
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
 #location {
   height: 50px;
   background-color: #EAEAEA;
@@ -69,22 +118,47 @@ picture img {
   margin-right: 2rem;
 }
 
+/* COLORS */
+/* SIZES */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
 .button {
-  padding: 2rem 3rem;
+  padding: 1.5rem 2rem;
   border-radius: 3rem;
   background: #9356DC;
-  background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
-  font-size: 2rem;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  font-size: 1.5rem;
+  font-weight: 500;
   color: white;
-  font-weight: bold;
   text-align: center;
   align-self: center;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.2);
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
-.button:is(a):hover {
+.button:hover {
+  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.5);
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.button:hover:is(a) {
   text-decoration: none;
 }
 
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
 h1, h2, h3, h4, h5, h6 {
   font-family: Shrikhand, sans-serif;
 }
@@ -106,18 +180,36 @@ h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem;
+  padding: 4rem 2rem;
 }
 #header #header-content > * {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+}
+#header #header-content > :nth-child(2) {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+#header #header-content > :last-child {
+  margin: 2rem 0;
 }
 
+/* COLORS */
+/* SIZES */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
 #how-it-works {
   padding: 2rem;
 }
 #how-it-works h1 {
   text-align: left;
-  margin: 2rem 0;
+  margin: 3rem 0;
+  padding: 0;
 }
 #how-it-works .steps {
   list-style-type: none;
@@ -129,9 +221,9 @@ h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
   margin-left: 1rem;
   margin-right: 0;
   background-color: #F6F6F6;
-  padding: 1.8rem 3rem;
+  padding: 2.5rem 3rem;
   border-radius: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.2);
   font-size: 1.8rem;
   font-weight: bold;
   display: flex;
@@ -139,11 +231,21 @@ h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 #how-it-works .steps .step:hover {
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
   background-color: rgba(147, 86, 220, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.3);
 }
 #how-it-works .steps .step:hover .fa {
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
   color: #9356DC;
 }
 #how-it-works .steps .step .badge {
@@ -159,14 +261,221 @@ h1:is(h1), h2:is(h1), h3:is(h1), h4:is(h1), h5:is(h1), h6:is(h1) {
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 #how-it-works .steps .step .fa {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 2rem;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
   color: rgba(0, 0, 0, 0.6);
+}
+
+/* COLORS */
+/* SIZES */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+/* COLORS */
+/* SIZES */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+/* COLORS */
+/* SIZES */
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-radius: 1.44rem;
+  text-align: left;
+  box-shadow: 0 0.3rem 1rem rgba(53, 53, 53, 0.1);
+  position: relative;
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.card:hover {
+  box-shadow: 0 0.3rem 1rem rgba(53, 53, 53, 0.3);
+  transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.card > .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  background-color: #99E2D0;
+  color: #009e76;
+  border-radius: 0.24rem;
+  border-bottom: 1px solid rgba(153, 226, 208, 0.1);
+  font-size: 1.33rem;
+  font-weight: 600;
+}
+.card > img {
+  width: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+  height: 175px;
+  border-radius: 1.44rem 1.44rem 0 0;
+}
+.card > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: initial;
+  align-items: initial;
+  position: relative;
+  text-align: inherit;
+  padding: 1.5rem;
+}
+.card > div > div {
+  text-align: inherit;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.card > div > div > h1 {
+  text-align: inherit;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.card > div > div > h2 {
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card > div > button {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 2rem;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+.card > div > button:hover {
+  background: linear-gradient(355deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card > div > button:hover > .far {
+  display: none;
+}
+.card > div > button:hover > .fa {
+  display: initial;
+}
+.card > div > button > .fa {
+  display: none;
+}
+
+#card-list {
+  list-style-type: none;
+}
+#card-list > li {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  margin-top: 0;
+  margin-bottom: 1.7rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#card-list > li > a {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+}
+#card-list > li > a, #card-list > li > a:hover {
+  text-decoration: none;
+}
+
+#restaurants {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #F6F6F6;
+  padding: 4rem 0;
+}
+#restaurants > h1 {
+  text-align: left;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+/* COLORS */
+/* SIZES */
+/* FONTS */
+/* SIZE */
+/* SPACING */
+/* FLEXBOX */
+/* COLORS */
+#footer {
+  color: #FFFFFF;
+  background-color: #353535;
+  padding: 2rem;
+}
+#footer .logo {
+  height: 1.7rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.7rem;
+}
+#footer ul {
+  list-style-type: none;
+}
+#footer ul li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#footer ul li a .fas {
+  width: 16px;
+  position: relative;
+  bottom: 0.1rem;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {

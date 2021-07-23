@@ -1,15 +1,48 @@
-@mixin fill
-	width: 100%
-	height: 100%
+@use "sass:map"
+@import "variables"
 
+/* FONTS */
 @mixin title
 	font-family: Shrikhand, sans-serif
 @mixin text
 	font-family: Roboto, sans-serif
 
+
+/* SIZE */
+@mixin fill
+	width: 100%
+	height: 100%
+
+
+
+/* SPACING */
 @mixin margin($top, $right, $bottom, $left)
 	margin:
 		top: $top or initial
 		bottom: $bottom or initial
 		left: $left or initial
 		right: $right or initial
+
+
+
+/* FLEXBOX */
+@mixin flex($flow: row wrap, $justify-content: initial, $align-items: initial)
+	display: flex
+	flex:
+		flow: $flow
+	justify-content: $justify-content
+	align-items: $align-items
+@mixin flex-grow($grow: 1)
+	flex-grow: $grow
+@mixin flex-shrink($shrink: 1)
+	flex-shrink: $shrink
+@mixin flex-basis($basis: initial)
+	flex-basis: $basis
+
+
+/* COLORS */
+@function color($name: "missing")
+	@if(map.has-key($colors, $name))
+		@return map.get($colors, $name)
+	@else
+		@return map.get($colors, "black")
