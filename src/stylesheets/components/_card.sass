@@ -6,7 +6,26 @@
 	border-radius: $radius * 1.8
 	text-align: left
 	box-shadow: 0 .3rem 1rem rgba(color('black'), .1)
+	position: relative
 
+	> .badge
+		position: absolute
+		top: 0
+		right: 0
+		margin: 1rem
+		padding:
+			top: .8rem
+			bottom: .6rem
+			left: 1.2rem
+			right: 1.2rem
+
+		background-color: color('accent')
+		color: color('dark-accent')
+		border-radius: $radius * .3
+		border-bottom: 1px solid rgba(color('accent'), .1)
+		font:
+			size: 1.33rem
+			weight: 600
 	> img
 		width: 100%
 		@include flex-grow()
