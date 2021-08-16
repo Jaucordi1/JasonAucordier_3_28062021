@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch src/stylesheets/main.sass docs/style.css",
-    "build": "sass src/stylesheets/main.sass docs/style.css"
+    "dev": "sass --watch src/stylesheets/main.sass docs/css/style.css",
+    "build": "sass src/stylesheets/main.sass docs/css/style.css"
   },
   "repository": {
     "type": "git",
