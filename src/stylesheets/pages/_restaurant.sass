@@ -1,0 +1,37 @@
+@import "../utils/variables"
+@import "../layout/menu_section"
+
+#main
+	background-color: transparent
+
+	> img
+		object-fit: cover
+		width: 100%
+		height: 27.4vh
+		margin: 0
+		padding: 0
+
+#restaurant-menu
+	background-color: color('light-grey')
+	border-radius: ($radius * 5) ($radius * 5) 0 0
+	margin-top: -($radius * 5)
+	position: relative
+	z-index: 2000
+
+	> header
+		@include flex(row wrap, space-between, center)
+		margin-bottom: 2.8rem
+		padding:
+			top: 1rem
+			left: 2rem
+			right: 2rem
+
+		> h1
+			@include title()
+			text-align: left
+
+	> footer
+		@include flex(column nowrap, center, stretch)
+		padding:
+			top: 1.5rem
+			bottom: 6rem

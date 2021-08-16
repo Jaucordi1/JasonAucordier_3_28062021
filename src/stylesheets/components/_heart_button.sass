@@ -1,0 +1,34 @@
+@import "../utils/mixins"
+
+.heart-btn
+	@include flex(column nowrap, center, center)
+	align-self: center
+	justify-self: center
+	color: color('black')
+	border: none
+	cursor: pointer
+	font:
+		size: 2.5rem
+
+	-webkit-background-clip: text
+	//noinspection CssInvalidPropertyValue
+	-moz-background-clip: text
+	//noinspection CssInvalidPropertyValue
+	background-clip: text
+
+	&:hover
+		background: linear-gradient(355deg, color('secondary') 0%, color('primary') 100%)
+		-webkit-background-clip: text
+		//noinspection CssInvalidPropertyValue
+		-moz-background-clip: text
+		//noinspection CssInvalidPropertyValue
+		background-clip: text
+		-webkit-text-fill-color: transparent
+
+		> .far
+			display: none
+		> .fa
+			display: block
+
+	> .fa
+		display: none

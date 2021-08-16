@@ -1,0 +1,18 @@
+@import "../components/menu_item"
+
+.menu-section
+	font-family: Roboto, sans-serif
+	margin: 2rem 0
+	padding: 0 2rem
+
+	> h2
+		font-family: inherit
+		text-transform: uppercase
+		border-bottom: 3px solid color('accent')
+		margin-bottom: 1.5rem
+		width: 40px
+		padding-bottom: .5rem
+
+	> .menu-items
+		@include flex(column nowrap, space-between, stretch)
+		margin-bottom: 2.5rem
