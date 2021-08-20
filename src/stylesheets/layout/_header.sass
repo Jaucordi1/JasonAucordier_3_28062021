@@ -1,24 +1,14 @@
 @import "../utils/mixins"
+@import "./hero"
 @import "../components/location"
 @import "../components/button"
 
 #header
-	background-color: $color-light-grey
 	@include flex(column nowrap, center, stretch)
 
-	#header-content
-		@include flex(column nowrap, space-between, center)
-		padding: 4rem 2rem
+@media (min-width: 1025px)
+	#header
+		@include flex(column wrap, stretch, stretch)
 
-		> *
-			margin-bottom: 1rem
-
-		> :first-child
-			max-width: 30rem
-		> :nth-child(2)
-			font:
-				size: 1.65rem
-				weight: 500
-			color: rgba($color-black, .6)
-		> :last-child
-			margin: 2rem 0
+		#location
+			width: 100%

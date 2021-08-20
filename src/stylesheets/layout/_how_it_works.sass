@@ -2,43 +2,52 @@
 @import "../utils/mixins"
 
 #how-it-works
-	padding: 2rem
+	padding: 4rem 2rem
+	max-width: 37.5rem
+	width: 100%
+	margin: 0 auto
 
-	h1
+	> h1
 		text-align: left
-		margin: 3rem 0
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+		margin:
+			top: 2.8rem
+			bottom: 2.8rem
+			left: 0
 		padding: 0
 
-	.steps
+	> .steps
+		@include flex(column nowrap, flex-start, stretch)
 		list-style-type: none
 
-		.step
+		> .step
 			@include text
-			@include margin(2rem, 0, 2rem, 1rem)
-			background-color: $color-light-grey
-			padding: 2.5rem 3rem
+			@include margin(1rem, 0, 1rem, 1rem)
+			@include flex(row nowrap, flex-start, center)
+			background-color: color('light-grey')
+			padding: 2rem 3rem
 			border-radius: 2rem
-			box-shadow: 0 .5rem 1rem rgba(color('grey'), .2)
+			box-shadow: 0 .5rem .8rem rgba(color('grey'), .1)
 			font:
 				size: 1.8rem
 				weight: bold
-			display: flex
-			flex-flow: row nowrap
-			justify-content: flex-start
-			align-items: center
 			cursor: pointer
 			transition:
 				property: background-color, box-shadow
 				duration: .3s
 				timing-function: ease-out
 
+			flex-grow: 1
+			max-width: 100%
 			&:hover
 				transition:
 					property: background-color, box-shadow
 					duration: .3s
 					timing-function: ease-out
 				background-color: rgba($color-primary, .1)
-				box-shadow: 0 .5rem 1rem rgba(color('grey'), .3)
+				box-shadow: 0 .5rem .8rem rgba(color('grey'), .2)
 
 				.fa
 					transition:
@@ -52,7 +61,9 @@
 				background-color: $color-primary
 				display: inline-flex
 				height: 2.5rem
+				min-height: 2.5rem
 				width: 2.5rem
+				min-width: 2.5rem
 				border-radius: 5rem
 				justify-content: center
 				align-items: center
@@ -68,3 +79,28 @@
 					duration: .3s
 					timing-function: ease-out
 				color: rgba($color-black, .6)
+			> span:last-child
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
+
+@media (min-width: 769px) and (max-width: 1024px)
+	#how-it-works
+		max-width: none
+		@include flex(row nowrap, center, flex-start)
+
+		> h1
+			width: 35%
+			text-align: right
+			margin-right: 4rem
+@media (min-width: 1025px)
+	#how-it-works
+		@include flex(column nowrap, flex-start, stretch)
+		max-width: 120rem
+
+		.steps
+			@include flex(row nowrap, flex-start, center)
+			margin-bottom: 2rem
+
+			> .step:not(:last-child)
+				margin-right: 3rem
