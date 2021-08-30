@@ -3,14 +3,52 @@
 @import "../components/card"
 
 #card-list
+	@include flex(column nowrap, space-between, stretch)
 	list-style-type: none
+	padding:
+		left: 2rem
+		right: 2rem
 
 	> li
 		@include flex(column nowrap, stretch, stretch)
-		@include margin(0, 2rem, 1.7rem, 2rem)
+		margin-bottom: 1.7rem
 
 		> a
 			@include flex(column nowrap, stretch, stretch)
 
 			&,&:hover
 				text-decoration: none
+
+@media (min-width: 481px)
+	#card-list
+		flex-flow: row wrap
+		justify-items: center
+		align-items: flex-start
+		align-content: space-between
+		padding:
+			left: 2rem
+			right: 2rem
+
+		> li
+			width: 100%
+			max-width: calc(50% - 1rem)
+			margin:
+				left: 0
+				right: 0
+
+// @media (min-width: 1025px)
+
+@media (min-width: 1201px)
+	#card-list
+		justify-content: flex-start
+		justify-items: flex-start
+		padding: 2rem
+
+		> li
+			max-width: none
+			width: calc(25% - 1.5rem)
+			flex-grow: 0
+			margin-right: 2rem
+
+			&:last-child
+				margin-right: 0

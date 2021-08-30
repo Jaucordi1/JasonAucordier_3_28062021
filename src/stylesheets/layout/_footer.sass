@@ -2,29 +2,83 @@
 
 #footer
 	color: color('white')
-	background:
-		color: color("grey")
+	background-color: color("grey")
 
-	padding: 2rem
+	> #footer-container
+		padding: 2rem
 
-	.logo
-		height: 1.7rem
-		margin:
-			top: .7rem
-			bottom: 1.7rem
+		> a
+			@include flex(row nowrap, flex-start, center)
+			margin:
+				top: .7rem
+				bottom: 1.7rem
 
-	ul
-		list-style-type: none
+			> .logo
+				height: 1.7rem
 
-		li
-			font-size: 1.5rem
-			margin-bottom: 1rem
+		> ul
+			list-style-type: none
 
-			a
-				.fas
-					width: 16px
-					position: relative
-					bottom: .1rem
-					margin-right: 1rem
-					font-size: 1.3rem
-					text-align: center
+			> li
+				font-size: 1.5rem
+				margin-bottom: 1rem
+
+				> a
+					@include flex(row nowrap, flex-start, center)
+
+					> .fas
+						width: 16px
+						position: relative
+						bottom: .1rem
+						margin-right: 1rem
+						font-size: 1.3rem
+						text-align: center
+
+@media (min-width: 481px) and (max-width: 768px)
+	#footer
+		> #footer-container
+			> ul
+				@include flex(row wrap)
+
+				> li
+					width: 50%
+
+					&:nth-child(1),
+					&:nth-child(3)
+						order: -1
+
+@media (min-width: 769px)
+	#footer
+		> #footer-container
+			> ul
+				@include flex(row nowrap, flex-start, center)
+				flex-grow: 1
+
+				> li
+					&:not(:last-child)
+						margin-right: 3rem
+
+					&:nth-child(3)
+						flex-grow: 1
+
+					&:nth-child(3),
+					&:nth-child(4)
+						> a
+							justify-content: flex-end
+
+@media (min-width: 1201px)
+	#footer
+		> #footer-container
+			max-width: 120rem
+			margin: 0 auto
+			@include flex(row nowrap, flex-start, center)
+
+			> a
+				margin:
+					top: 0
+					bottom: 0
+					right: 5rem
+
+			> ul
+				> li
+					margin-bottom: 0

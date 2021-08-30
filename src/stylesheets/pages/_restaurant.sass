@@ -1,5 +1,5 @@
 @import "../utils/variables"
-@import "../layout/menu_section"
+@import "../layout/menu_sections"
 
 #main
 	background-color: transparent
@@ -30,8 +30,16 @@
 			@include title()
 			text-align: left
 
+
 	> footer
 		@include flex(column nowrap, center, stretch)
 		padding:
 			top: 1.5rem
 			bottom: 6rem
+@media (min-width: 1025px)
+	#restaurant-menu
+		> *
+			max-width: 1200px
+			margin:
+				left: auto
+				right: auto

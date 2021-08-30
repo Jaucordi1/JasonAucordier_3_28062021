@@ -11,22 +11,22 @@
 		<script crossorigin="anonymous" src="https://kit.fontawesome.com/47425e3146.js"></script>
 
 		<!-- ESSENTIAL SOCIALS -->
-		<meta property="og:title" content="Le délice des sens" />
-		<meta property="og:description" content="Un restaurant disponible sur OhMyFood !" />
-		<meta property="og:image"
-		      content="https://jaucordi1.github.io/JasonAucordier_3_28062021/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
-		<meta property="og:url" content="https://jaucordi1.github.io/JasonAucordier_3_28062021/le-delice-des-sens.html" />
+		<meta content="{Nom du restaurant}" property="og:title" />
+		<meta content="Un restaurant disponible sur OhMyFood !" property="og:description" />
+		<meta content="https://jaucordi1.github.io/JasonAucordier_3_28062021/images/restaurants/{Image du restaurant}"
+		      property="og:image" />
+		<meta content="https://jaucordi1.github.io/JasonAucordier_3_28062021/{Slug du restaurant}.html" property="og:url" />
 		<meta content="summary_large_image" name="twitter:card" />
 
 		<!-- NON-ESSENTIAL, BUT RECOMMENDED -->
 		<!--<meta property="og:site_name" content="OhMyFood" />-->
-		<!--<meta name="twitter:image:alt" content='Photo de "Le délice des sens"' />-->
+		<!--<meta name="twitter:image:alt" content='Photo de "{Nom du restaurant}"' />-->
 
 		<!-- NON-ESSENTIAL, BUT REQUIRED FOR ANALYTICS -->
-		<!--<meta property="fb:app_id" content="oh-my-food" />-->
-		<!--<meta name="twitter:site" content="@oh-my-food-account" />-->
+		<!--<meta property="fb:app_id" content="{Facebook App ID}" />-->
+		<!--<meta name="twitter:site" content="@{Twitter Account}" />-->
 
-		<title>OhMyFood - Le délice des sens</title>
+		<title>OhMyFood - {Nom du restaurant}</title>
 	</head>
 	<body>
 		<nav id="nav-bar">
@@ -40,10 +40,10 @@
 			</a>
 		</nav>
 		<main id="main">
-			<img alt='Photo de "La palette du goût"' src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
+			<img alt='Photo de "{Nom du restaurant}"' src="images/restaurants/{Image du restaurant}" />
 			<div id="restaurant-menu">
 				<header>
-					<h1>Le délice des sens</h1>
+					<h1>{Nom du restaurant}</h1>
 					<button class="heart-btn" onclick="event.preventDefault(); alert('Liked!')">
 						<i class="far fa-heart"></i>
 						<i class="fa fa-heart"></i>
@@ -55,9 +55,9 @@
 						<div class="menu-items">
 							<article class="menu-item">
 								<div>
-									<h3 title="Tartare de thon">Tartare de thon</h3>
+									<h3 title="{Item #1}">{Item #1}</h3>
 									<div>
-										<p title="Assaisonné au yuzu">Assaisonné au yuzu</p>
+										<p title="{Item Description #1}">{Item Description #1}</p>
 										<strong>25€</strong>
 									</div>
 								</div>
@@ -67,9 +67,9 @@
 							</article>
 							<article class="menu-item">
 								<div>
-									<h3 title="Bouchée de homard croustillant">Bouchée de homard croustillant</h3>
+									<h3 title="{Item #2}">{Item #2}</h3>
 									<div>
-										<p title="Et sa farandole de petits légumes">Et sa farandole de petits légumes</p>
+										<p title="{Item Description #2}">{Item Description #2}</p>
 										<strong>35€</strong>
 									</div>
 								</div>
@@ -79,9 +79,9 @@
 							</article>
 							<article class="menu-item">
 								<div>
-									<h3 title="Velouté de cèpes">Velouté de cèpes</h3>
+									<h3 title="{Item #3}">{Item #3}</h3>
 									<div>
-										<p title="Aux truffes">Aux truffes</p>
+										<p title="{Item Description #3}">{Item Description #3}</p>
 										<strong>20€</strong>
 									</div>
 								</div>
@@ -96,9 +96,9 @@
 						<div class="menu-items">
 							<article class="menu-item">
 								<div>
-									<h3 title="Poulet rôti aux herbes de provence">Poulet rôti aux herbes de provence</h3>
+									<h3 title="{Item #1}">{Item #1}</h3>
 									<div>
-										<p title="Et sa crème de truffe">Et sa crème de truffe</p>
+										<p title="{Item Description #1}">{Item Description #1}</p>
 										<strong>40€</strong>
 									</div>
 								</div>
@@ -108,9 +108,9 @@
 							</article>
 							<article class="menu-item">
 								<div>
-									<h3 title="Langouste rôtie">Langouste rôtie</h3>
+									<h3 title="{Item #2}">{Item #2}</h3>
 									<div>
-										<p title="Et ses légumes de saison">Et ses légumes de saison</p>
+										<p title="{Item Description #2}">{Item Description #2}</p>
 										<strong>35€</strong>
 									</div>
 								</div>
@@ -120,9 +120,9 @@
 							</article>
 							<article class="menu-item">
 								<div>
-									<h3 title="Côte de boeuf angus">Côte de boeuf angus</h3>
+									<h3 title="{Item #3}">{Item #3}</h3>
 									<div>
-										<p title="Et sa purée de panais">Et sa purée de panais</p>
+										<p title="{Item Description #3}">{Item Description #3}</p>
 										<strong>44€</strong>
 									</div>
 								</div>
@@ -137,9 +137,9 @@
 						<div class="menu-items">
 							<article class="menu-item">
 								<div>
-									<h3 title="Farandole de desserts">Farandole de desserts</h3>
+									<h3 title="{Item #1}">{Item #1}</h3>
 									<div>
-										<p title="Du chef">Du chef</p>
+										<p title="{Item Description #1}">{Item Description #1}</p>
 										<strong>18€</strong>
 									</div>
 								</div>
@@ -149,9 +149,9 @@
 							</article>
 							<article class="menu-item">
 								<div>
-									<h3 title="Crème brulée">Crème brulée</h3>
+									<h3 title="{Item #2}">{Item #2}</h3>
 									<div>
-										<p title="Revisitée">Revisitée</p>
+										<p title="{Item Description #2}">{Item Description #2}</p>
 										<strong>22€</strong>
 									</div>
 								</div>
@@ -161,9 +161,9 @@
 							</article>
 							<article class="menu-item">
 								<div>
-									<h3 title="Tiramisu">Tiramisu</h3>
+									<h3 title="{Item #3}">{Item #3}</h3>
 									<div>
-										<p title="À la noisette">À la noisette</p>
+										<p title="{Item Description #3}">{Item Description #3}</p>
 										<strong>23€</strong>
 									</div>
 								</div>

@@ -5,14 +5,15 @@
 	margin: 0
 	padding: 0
 
-html, body
+html
 	@include fill
 	@include text
-
-html
 	font-size: 62.5%
 
 	> body
+		@include fill
+		@include text
+		@include flex(column nowrap, flex-start, stretch)
 		font-size: 1rem
 
 a
@@ -27,3 +28,7 @@ a
 
 	&:last-child
 		margin-bottom: 0
+
+@media (min-width: 1025px)
+	#main
+		flex-grow: 1
