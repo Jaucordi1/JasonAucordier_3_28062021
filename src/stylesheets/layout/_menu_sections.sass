@@ -1,1 +1,11 @@
 @import "./menu_section"
+
+.menu-sections
+	@include flex(column nowrap, flex-start, stretch)
+
+@media (min-width: 1025px)
+	.menu-sections
+		flex:
+			direction: row
+			wrap: wrap
+		justify-content: space-between
