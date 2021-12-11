@@ -790,7 +790,11 @@ picture img {
 /* FLEXBOX */
 /* COLORS */
 .heart-btn {
-  --animation-duration: .5s;
+  --animation-duration: .3s;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   align-self: center;
   font-size: 2.5rem;
   cursor: pointer;
@@ -800,25 +804,60 @@ picture img {
   height: 1em;
 }
 .heart-btn > * {
+  transform-origin: center;
+}
+.heart-btn > .heart-bg {
   position: absolute;
   left: 0;
   right: 0;
-}
-.heart-btn > *.heart-bg {
-  opacity: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0);
   background: linear-gradient(160deg, #FF79DA 30%, #9356DC 100%);
   -moz-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  transition: opacity var(--animation-duration) ease;
-  z-index: -1;
+}
+.heart-btn > .heart-main {
+  transform: scale(1);
 }
 .heart-btn:hover > .heart-bg {
-  opacity: 1;
+  animation: FadeIn var(--animation-duration) forwards ease-in-out;
+}
+.heart-btn:hover > .heart-main {
+  animation: StrokeOut var(--animation-duration) forwards ease-in-out;
 }
 
+@keyframes FadeIn {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes StrokeOut {
+  0% {
+    transform: scale(1);
+    color: #000000;
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  60% {
+    color: #9356DC;
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    color: #FF79DA;
+  }
+}
 .card {
   display: flex;
   flex-flow: column nowrap;
