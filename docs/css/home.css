@@ -1267,7 +1267,7 @@ body.with-loader {
     opacity: 0;
   }
   1% {
-    disply: flex;
+    display: flex;
     opacity: 0;
   }
   100% {
