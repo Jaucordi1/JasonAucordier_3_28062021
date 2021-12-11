@@ -840,18 +840,18 @@ picture img {
 .menu-item > :last-child > .fa {
   transform: rotate(0deg);
 }
-.menu-item:hover {
+.menu-item:is(:hover, :active, :focus, :focus-visible, :focus-within) {
   box-shadow: 0 0.3rem 1rem rgba(53, 53, 53, 0.3);
   transition-property: box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-.menu-item:hover > :last-child {
+.menu-item:is(:hover, :active, :focus, :focus-visible, :focus-within) > :last-child {
   min-width: 64px;
   max-width: 64px;
   transition-duration: 0.3s;
 }
-.menu-item:hover > :last-child > .fa {
+.menu-item:is(:hover, :active, :focus, :focus-visible, :focus-within) > :last-child > .fa {
   transform: rotate(360deg);
   transition-property: transform;
   transition-duration: 0.3s;

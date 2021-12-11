@@ -35,10 +35,9 @@ $rad: $radius * 1.5
 			text-overflow: ellipsis
 			white-space: nowrap
 			overflow: hidden
-			font:
-				family: inherit
-				weight: bold
-				size: 100%
+			font-family: inherit
+			font-weight: bold
+			font-size: 100%
 
 		> :last-child
 			@include flex(row nowrap, space-between, stretch)
@@ -67,12 +66,11 @@ $rad: $radius * 1.5
 		> .fa
 			transform: rotate(0deg)
 
-	&:hover
+	&:is(:hover,:active,:focus,:focus-visible,:focus-within)
 		box-shadow: 0 .3rem 1rem rgba(color('grey'), .3)
-		transition:
-			property: box-shadow
-			duration: .3s
-			timing-function: ease-out
+		transition-property: box-shadow
+		transition-duration: .3s
+		transition-timing-function: ease-out
 
 		> :last-child
 			min-width: 64px
@@ -81,10 +79,9 @@ $rad: $radius * 1.5
 
 			> .fa
 				transform: rotate(360deg)
-				transition:
-					property: transform
-					duration: .3s
-					timing-function: ease
+				transition-property: transform
+				transition-duration: .3s
+				transition-timing-function: ease
 
 	@for $i from 1 through 10
 		&:nth-child(#{$i}n)
