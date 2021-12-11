@@ -1,5 +1,11 @@
 @import "../utils/variables"
+@import "../components/_titles"
+@import "../layout/nav_bar"
+@import "../layout/restaurants"
+@import "../components/_heart_button"
 @import "../layout/menu_sections"
+@import "../components/button"
+@import "../layout/footer"
 
 #main
 	background-color: transparent
@@ -30,7 +36,6 @@
 			@include title()
 			text-align: left
 
-
 	> footer
 		@include flex(column nowrap, center, stretch)
 		padding:
@@ -40,6 +45,5 @@
 	#restaurant-menu
 		> *
 			max-width: 1200px
-			margin:
-				left: auto
-				right: auto
+			margin-left: auto
+			margin-right: auto

@@ -5,15 +5,23 @@
 	@include flex(column nowrap, space-between, center)
 	padding: 4rem 2rem
 
+	h1
+		font-size: 2.5rem
+		font-weight: bold !important
+		text-align: center
+	h2
+		font-size: 1.6rem
+		text-align: center
+		font-weight: normal
+
 	> *
 		margin-bottom: 1rem
 
 	> :first-child
 		max-width: 30rem
 	> :nth-child(2)
-		font:
-			size: 1.65rem
-			weight: 500
+		font-size: 1.65rem
+		font-weight: 500
 		color: rgba($color-black, .6)
 	> :last-child
 		margin: 2rem 0
