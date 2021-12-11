@@ -147,6 +147,10 @@ a:hover {
     flex-grow: 1;
   }
 }
+:is(h1, h2, h3, h4, h5, h6, p, span, strong, img, svg, a, small) {
+  user-select: none;
+}
+
 /* COLORS */
 /* SIZES */
 @-webkit-keyframes fadeInUp {
@@ -928,95 +932,36 @@ picture img {
 /* SPACING */
 /* FLEXBOX */
 /* COLORS */
-#heart-btn-gradient {
-  border: none;
-  outline: none;
-}
-
 .heart-btn {
-  --animation-duration: 2s;
+  --animation-duration: .5s;
   align-self: center;
   font-size: 2.5rem;
-  fill: transparent;
-  stroke: #000000;
-  stroke-width: 1.5em;
   cursor: pointer;
   position: relative;
   z-index: 1;
-  overflow: visible;
   width: 1em;
+  height: 1em;
 }
-.heart-btn path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
-}
-.heart-btn path.heart-background {
+.heart-btn > * {
   position: absolute;
   left: 0;
   right: 0;
+}
+.heart-btn > *.heart-bg {
+  opacity: 0;
+  background: linear-gradient(160deg, #FF79DA 30%, #9356DC 100%);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: opacity var(--animation-duration) ease;
   z-index: -1;
-  stroke: none;
 }
-.heart-btn:hover .heart-main {
-  animation: stroke-animation var(--animation-duration) ease-in-out both;
-}
-.heart-btn:hover .heart-main ~ .heart-background {
-  animation: fade-animation var(--animation-duration) ease-in-out both;
+.heart-btn:hover > .heart-bg {
+  opacity: 1;
 }
 
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: url(#gradient);
-    fill-opacity: 0;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: url(#gradient);
-    fill-opacity: 1;
-  }
-}
-@keyframes fade-animation {
-  0% {
-    fill: transparent;
-    fill-opacity: 0;
-  }
-  70% {
-    fill: url(#gradient);
-    fill-opacity: 0;
-    transform: scale(1);
-  }
-  80% {
-    fill: url(#gradient);
-    fill-opacity: 1;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-    fill: url(#gradient);
-    fill-opacity: 1;
-  }
-}
 .card {
   display: flex;
   flex-flow: column nowrap;
@@ -1232,10 +1177,11 @@ main#main {
   color: #FFFFFF;
   background-color: #353535;
 }
-#footer > #footer-container {
+
+#footer-container {
   padding: 2rem;
 }
-#footer > #footer-container > a {
+#footer-container > a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -1243,23 +1189,23 @@ main#main {
   margin-top: 0.7rem;
   margin-bottom: 1.7rem;
 }
-#footer > #footer-container > a > .logo {
+#footer-container > a > .logo {
   height: 1.7rem;
 }
-#footer > #footer-container > ul {
+#footer-container > ul {
   list-style-type: none;
 }
-#footer > #footer-container > ul > li {
+#footer-container > ul > li {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-#footer > #footer-container > ul > li > a {
+#footer-container > ul > li > a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 }
-#footer > #footer-container > ul > li > a > .fas {
+#footer-container > ul > li > a > .fas {
   width: 16px;
   position: relative;
   bottom: 0.1rem;
@@ -1269,52 +1215,52 @@ main#main {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  #footer > #footer-container > ul {
+  #footer-container > ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: initial;
     align-items: initial;
   }
-  #footer > #footer-container > ul > li {
+  #footer-container > ul > li {
     width: 50%;
   }
-  #footer > #footer-container > ul > li:nth-child(1), #footer > #footer-container > ul > li:nth-child(3) {
+  #footer-container > ul > li:nth-child(1), #footer-container > ul > li:nth-child(3) {
     order: -1;
   }
 }
 @media (min-width: 769px) {
-  #footer > #footer-container > ul {
+  #footer-container > ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
   }
-  #footer > #footer-container > ul > li:not(:last-child) {
+  #footer-container > ul > li:not(:last-child) {
     margin-right: 3rem;
   }
-  #footer > #footer-container > ul > li:nth-child(3) {
+  #footer-container > ul > li:nth-child(3) {
     flex-grow: 1;
   }
-  #footer > #footer-container > ul > li:nth-child(3) > a, #footer > #footer-container > ul > li:nth-child(4) > a {
+  #footer-container > ul > li:nth-child(3) > a, #footer-container > ul > li:nth-child(4) > a {
     justify-content: flex-end;
   }
 }
 @media (min-width: 1201px) {
-  #footer > #footer-container {
-    max-width: 120rem;
-    margin: 0 auto;
+  #footer-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    max-width: 120rem;
+    margin: 0 auto;
   }
-  #footer > #footer-container > a {
+  #footer-container > a {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 5rem;
   }
-  #footer > #footer-container > ul > li {
+  #footer-container > ul > li {
     margin-bottom: 0;
   }
 }
