@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch src/stylesheets/main.sass docs/css/style.css",
-    "build": "sass src/stylesheets/main.sass docs/css/style.css"
+    "dev": "sass --watch src/stylesheets/main.sass:docs/css/style.css src/stylesheets/pages/_accueil.sass:docs/css/home.css src/stylesheets/pages/_restaurant.sass:docs/css/restaurant.css",
+    "build": "sass src/stylesheets/main.sass:docs/css/style.css src/stylesheets/pages/_accueil.sass:docs/css/home.css src/stylesheets/pages/_restaurant.sass:docs/css/restaurant.css"
   },
   "repository": {
     "type": "git",
