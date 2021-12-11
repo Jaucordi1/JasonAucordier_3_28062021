@@ -1,6 +1,7 @@
 @use "sass:map"
 @import "variables"
 @import "../mixins/fade_in_up"
+@import "../mixins/fade_out"
 
 /* FONTS */
 @mixin title
@@ -8,29 +9,22 @@
 @mixin text
 	font-family: Roboto, sans-serif
 
-
 /* SIZE */
 @mixin fill
 	width: 100%
 	height: 100%
 
-
-
 /* SPACING */
 @mixin margin($top, $right, $bottom, $left)
-	margin:
-		top: $top or initial
-		bottom: $bottom or initial
-		left: $left or initial
-		right: $right or initial
-
-
+	margin-top: $top or initial
+	margin-bottom: $bottom or initial
+	margin-left: $left or initial
+	margin-right: $right or initial
 
 /* FLEXBOX */
 @mixin flex($flow: row wrap, $justify-content: initial, $align-items: initial)
 	display: flex
-	flex:
-		flow: $flow
+	flex-flow: $flow
 	justify-content: $justify-content
 	align-items: $align-items
 @mixin flex-grow($grow: 1)
@@ -39,7 +33,6 @@
 	flex-shrink: $shrink
 @mixin flex-basis($basis: initial)
 	flex-basis: $basis
-
 
 /* COLORS */
 @function color($name: "missing")

@@ -1,0 +1,24 @@
+@keyframes FadeOut
+	0%
+		opacity: 1
+		display: block
+		transition: background-color 1s ease
+		z-index: 2000
+	99%
+		opacity: 0
+		display: block
+		background-color: transparent
+		z-index: 2000
+	100%
+		opacity: 0
+		display: none
+		background-color: transparent
+		z-index: -1
+
+@mixin fadeOut()
+	-webkit-animation-name: FadeOut
+	animation-name: FadeOut
+	-webkit-animation-duration: 1s
+	animation-duration: 1s
+	-webkit-animation-fill-mode: forwards
+	animation-fill-mode: forwards

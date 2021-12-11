@@ -1,34 +1,78 @@
 @import "../utils/mixins"
 
-.heart-btn
-	@include flex(column nowrap, center, center)
-	align-self: center
-	justify-self: center
-	color: color('black')
+#heart-btn-gradient
 	border: none
-	cursor: pointer
-	font:
-		size: 2.5rem
+	outline: none
 
-	-webkit-background-clip: text
-	//noinspection CssInvalidPropertyValue
-	-moz-background-clip: text
-	//noinspection CssInvalidPropertyValue
-	background-clip: text
+.heart-btn
+	--animation-duration: 2s
+
+	align-self: center
+	font-size: 2.5rem
+	fill: transparent
+	stroke: color('black')
+	stroke-width: 1.5em
+	cursor: pointer
+	position: relative
+	z-index: 1
+	overflow: visible
+	width: 1em
+
+	path
+		stroke-dashoffset: 0
+		stroke-dasharray: 1550
+		transform-origin: center
+
+		&.heart-background
+			position: absolute
+			left: 0
+			right: 0
+			z-index: -1
+			stroke: none
 
 	&:hover
-		background: linear-gradient(355deg, color('secondary') 0%, color('primary') 100%)
-		-webkit-background-clip: text
-		//noinspection CssInvalidPropertyValue
-		-moz-background-clip: text
-		//noinspection CssInvalidPropertyValue
-		background-clip: text
-		-webkit-text-fill-color: transparent
+		.heart-main
+			animation: stroke-animation var(--animation-duration) ease-in-out both
+		.heart-main ~ .heart-background
+			animation: fade-animation var(--animation-duration) ease-in-out both
 
-		> .far
-			display: none
-		> .fa
-			display: block
+@keyframes stroke-animation
+	0%
+		stroke-dashoffset: 0
+	30%
+		stroke-dashoffset: 1550
+	60%
+		stroke-dashoffset: 3100
+		fill: transparent
+		transform: scale(1)
+	80%
+		fill: url(#gradient)
+		fill-opacity: 0
+		transform: scale(1.1)
+	90%
+		transform: scale(1)
+	100%
+		stroke-dashoffset: 3100
+		fill: url(#gradient)
+		fill-opacity: 1
 
-	> .fa
-		display: none
+@keyframes fade-animation
+	0%
+		fill: transparent
+		fill-opacity: 0
+	70%
+		fill: url(#gradient)
+		fill-opacity: 0
+		transform: scale(1)
+	80%
+		fill: url(#gradient)
+		fill-opacity: 1
+		transform: scale(1.1)
+		opacity: 1
+	90%
+		opacity: 1
+	100%
+		transform: scale(2.5)
+		opacity: 0
+		fill: url(#gradient)
+		fill-opacity: 1

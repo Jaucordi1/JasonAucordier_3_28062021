@@ -30,7 +30,25 @@
 	<title>OhMyFood</title>
 </head>
 
+<!-- <body class="with-loader"> -->
+
 <body>
+	<!-- Heart buttons needs to add this ONCE on the page to have working background gradients ! -->
+	<svg id="heart-btn-gradient" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="0" height="0">
+		<LinearGradient id="gradient" x2="1" y2="1">
+			<stop offset="40%" stop-color="#FF79DA" />
+			<stop offset="100%" stop-color="#9356DC" />
+		</LinearGradient>
+	</svg>
+	<!-- <div id="loader">
+		<div class="loader">
+			<i class="outer fa fa-flip-vertical">
+				<i class="fas fa-circle-notch fa-spin"></i>
+			</i>
+			<i class="inner fas fa-circle-notch fa-spin"></i>
+		</div>
+		<small>Veuillez patienter…</small>
+	</div> -->
 	<nav id="nav-bar">
 		<a class="brand-link" href="index.html">
 			<picture class="brand">
@@ -82,14 +100,17 @@
 							<img alt='Photo de "La palette du goût"'
 								src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
 							<div>
-								<div>
+								<div class="caption">
 									<h2>La palette du goût</h2>
 									<h3>Ménilmontant</h3>
 								</div>
-								<span class="heart-btn">
-									<i class="far fa-heart"></i>
-									<i class="fa fa-heart"></i>
-								</span>
+								<svg class="heart-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="36" height="36">
+									<path class="heart-main"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+									<path class="heart-background"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+								</svg>
 							</div>
 						</article>
 					</a>
@@ -101,14 +122,17 @@
 							<img alt='Photo de "La note enchantée"'
 								src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" />
 							<div>
-								<div>
+								<div class="caption">
 									<h2>La note enchantée</h2>
 									<h3>Charonne</h3>
 								</div>
-								<span class="heart-btn">
-									<i class="far fa-heart"></i>
-									<i class="fa fa-heart"></i>
-								</span>
+								<svg class="heart-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="36" height="36">
+									<path class="heart-main"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+									<path class="heart-background"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+								</svg>
 							</div>
 						</article>
 					</a>
@@ -119,14 +143,17 @@
 							<img alt='Photo de "À la française"'
 								src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" />
 							<div>
-								<div>
+								<div class="caption">
 									<h2>À la française</h2>
 									<h3>Cité Rouge</h3>
 								</div>
-								<span class="heart-btn">
-									<i class="far fa-heart"></i>
-									<i class="fa fa-heart"></i>
-								</span>
+								<svg class="heart-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="36" height="36">
+									<path class="heart-main"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+									<path class="heart-background"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+								</svg>
 							</div>
 						</article>
 					</a>
@@ -137,14 +164,17 @@
 							<img alt='Photo de "Le délice des sens"'
 								src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" />
 							<div>
-								<div>
+								<div class="caption">
 									<h2>Le délice des sens</h2>
 									<h3>Folie-Méricourt</h3>
 								</div>
-								<span class="heart-btn">
-									<i class="far fa-heart"></i>
-									<i class="fa fa-heart"></i>
-								</span>
+								<svg class="heart-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="36" height="36">
+									<path class="heart-main"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+									<path class="heart-background"
+										d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+								</svg>
 							</div>
 						</article>
 					</a>

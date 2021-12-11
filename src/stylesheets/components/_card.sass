@@ -8,36 +8,25 @@
 	text-align: left
 	box-shadow: 0 .3rem 1rem rgba(color('grey'), .1)
 	position: relative
-	transition:
-		property: box-shadow
-		duration: .3s
-		timing-function: ease-out
+	transition: box-shadow .3s ease-out
 
 	&:hover
 		box-shadow: 0 .3rem 1rem rgba(color('grey'), .3)
-		transition:
-			property: box-shadow
-			duration: .3s
-			timing-function: ease-out
+		transition: box-shadow .3s ease-out
 
 	> .badge
 		position: absolute
 		top: 0
 		right: 0
 		margin: 1rem
-		padding:
-			top: .8rem
-			bottom: .6rem
-			left: 1.2rem
-			right: 1.2rem
+		padding: .8rem 1.2rem .6rem 1.2rem
 
 		background-color: color('accent')
 		color: color('dark-accent')
 		border-radius: $radius * .3
 		border-bottom: 1px solid rgba(color('accent'), .1)
-		font:
-			size: 1.33rem
-			weight: 600
+		font-size: 1.33rem
+		font-weight: 600
 	> img
 		width: 100%
 		@include flex-grow()
@@ -51,7 +40,7 @@
 		text-align: inherit
 		padding: 1.5rem
 
-		> div
+		> .caption
 			text-align: inherit
 			@include flex-grow()
 			@include flex(column nowrap, flex-start, stretch)
@@ -61,9 +50,8 @@
 				text-align: inherit
 				margin-bottom: .5rem
 				padding: 0
-				font:
-					weight: bold
-					size: 2rem
+				font-weight: bold
+				font-size: 2rem
 				white-space: nowrap
 				text-overflow: ellipsis
 				overflow: hidden
@@ -77,8 +65,3 @@
 
 		> button.heart-btn
 			@include margin(1rem, 0, 1rem, 0)
-
-//@media (min-width: 481px) and (max-width: 768px)
-//	.card
-//		> div
-//			> button.heart-btn
